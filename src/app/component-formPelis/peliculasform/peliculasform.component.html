@@ -13,6 +13,12 @@
                     <span *ngIf="movie.Puntuacion <1 || movie.Puntuacion >10" class="validar">*La puntuación tiene que ser entre 1 y 10</span>
                 </div>
                 <button type="submit"  [disabled]="f.invalid"  class="btn btn-primary btn-lg btn-block button-save">Guardar</button>
+                <div *ngIf="spinnerFlag" style="width: 100% ; display: flex; justify-content: center; padding-top: 10px; padding-bottom: 10px;">
+                    <img src="../../../assets/loading-gif.gif" alt="spinner carga" width="50px">
+                </div>
+                <div *ngIf="spinnerFlag" style="width: 100% ; display: flex; justify-content: center; padding-top: 5px; padding-bottom: 5px;">
+                    <h4>Cargando espera por favor.</h4>
+                </div>
             </form>
         </div>
     </div>

@@ -13,5 +13,11 @@
             <p>Puntuacion: {{movie.Puntuacion}}</p>
             <a [routerLink]="['/peliculas/edit',movie.ID]" class="btn btn-primary btn-block button-edit" >Editar Pelicula</a>
         </div>
+        <div *ngIf="spinnerFlag" style="width: 100% ; display: flex; justify-content: center; padding-top: 15px; padding-bottom: 10px;">
+            <img src="../../../assets/loading-gif.gif" alt="spinner carga" width="50px">
+        </div>
+        <div *ngIf="spinnerFlag" style="width: 100% ; display: flex; justify-content: center; padding-top: 5px; padding-bottom: 5px;">
+            <h5>Cargando espera por favor.</h5>
+        </div>
     </div>
 </div>

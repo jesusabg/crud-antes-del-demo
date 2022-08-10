@@ -47,7 +47,7 @@ export class LoginComponent {
             this.datosIncorrectos = true;
             this.spinnerFlag = false;
           }else if(error.status == 500){
-            this.datosIncorrectos = true;
+            this.datosIncorrectos = false;
           }
           this.spinnerFlag = false
         },
